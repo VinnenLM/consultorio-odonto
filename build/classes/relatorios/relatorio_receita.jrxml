@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_receita" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="acf4f670-721e-420a-9153-5df66f785690">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="121"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     paciente.`nome` AS paciente_nome
+FROM
+     `paciente` paciente]]>
+	</queryString>
+	<field name="data" class="java.lang.String"/>
+	<field name="paciente" class="java.lang.String"/>
+	<field name="medico" class="java.lang.String"/>
+	<field name="medicamento" class="java.lang.String"/>
+	<field name="observacao" class="java.lang.String"/>
+	<group name="Paciente_id_paciente">
+		<groupExpression><![CDATA[]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="109" y="16" width="337" height="47" uuid="ea4775c6-89e5-4a36-9324-d2ae9d660de3"/>
+				<textElement textAlignment="Center">
+					<font size="30" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Receita Médica]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="297" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="24" width="74" height="20" uuid="6c382301-5708-422c-8e6b-d9148b21f0db"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="44" width="74" height="20" uuid="f86555d3-2b84-45b7-a32c-c498f65f00ed"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="95" y="24" width="125" height="20" uuid="d49b373d-c988-4614-9440-c5b3220e1818"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="220" y="24" width="82" height="20" uuid="d75db614-2c2b-4a0c-80f6-259436ff629c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="95" y="44" width="125" height="20" uuid="e7663bea-2559-44b6-b299-09d7185fa8c0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="220" y="44" width="82" height="20" uuid="aa5fc83c-1ae7-42d5-b784-26d7cd3099a6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="302" y="24" width="233" height="20" uuid="85a6a21e-35ee-4a6b-86d1-7996e573eeff"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="302" y="44" width="233" height="20" uuid="50e1320c-7ac7-4384-8cfd-b93d3d18e0f8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="110" width="516" height="104" uuid="10705eff-a016-4912-aa7d-57cb02bc5018"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="110" width="72" height="20" uuid="c100aece-8411-488c-bfa0-f074522cb2b6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="24" width="62" height="20" uuid="b272a9d6-32a8-4b3a-8f48-11ce085b11a7"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="24" width="111" height="20" uuid="eb725633-0006-4b97-bd12-49ff3cfd47ef"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="44" width="62" height="20" uuid="4b93c906-a735-4fd8-aa70-3d50180f5a80"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="44" width="111" height="20" uuid="a368818c-88cb-4002-b20c-225a7c25ce66"/>
+				<textFieldExpression><![CDATA[$F{paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="233" y="24" width="69" height="20" uuid="2c189094-b188-4020-baa7-d8db59db0757"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Médico:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="312" y="24" width="223" height="20" uuid="c5922761-5562-4d80-8de2-833c0daaf851"/>
+				<textFieldExpression><![CDATA[$F{medico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="233" y="44" width="69" height="20" uuid="7e062bbc-5f60-443d-82a6-1785cf236607"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicamento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="312" y="44" width="223" height="20" uuid="975042ad-b920-4965-8ba1-2dc93978bc14"/>
+				<textFieldExpression><![CDATA[$F{medicamento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="110" width="62" height="20" uuid="8435c8c4-d4bb-48e2-a716-1eed03060fbd"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observação:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="110" width="426" height="20" uuid="7101c3a9-af57-4833-818c-fdd29bb51947"/>
+				<textFieldExpression><![CDATA[$F{observacao}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="192" y="262" width="145" height="1" uuid="37648503-7c8a-4b24-9b1e-17d2276c8523"/>
+			</line>
+			<staticText>
+				<reportElement x="210" y="263" width="114" height="20" uuid="f56ea506-83bf-4662-966b-0bc9870100c8"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Médico]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="30" width="282" height="20" uuid="c7c6658d-bb07-4d6a-a8af-3c468de13a61"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Vinícius Mendonça - Projeto Consultório APOO 2021]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

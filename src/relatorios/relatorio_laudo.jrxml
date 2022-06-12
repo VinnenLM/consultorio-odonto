@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_laudo" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="113691d8-292a-4125-a654-5ab66bcc5e8a">
+	<property name="ireport.zoom" value="1.4641000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="161"/>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="hora" class="java.lang.String"/>
+	<field name="paciente" class="java.lang.String"/>
+	<field name="medico" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="168" y="18" width="217" height="41" uuid="7e3de065-5bf7-496e-b6ba-759f0f146533"/>
+				<textElement>
+					<font size="30" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Laudo Médico]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="309" splitType="Stretch">
+			<staticText>
+				<reportElement x="282" y="38" width="86" height="20" uuid="99f71436-6a5a-4d09-ab4e-d5c3af588add"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="385" y="38" width="83" height="20" uuid="eff640ca-fc01-4210-9384-29142206f837"/>
+				<textFieldExpression><![CDATA[$F{hora}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="79" y="58" width="89" height="20" uuid="97c00efb-34e5-4db2-897d-19c71d788dc4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="58" width="288" height="20" uuid="f5cad023-baa9-4a10-b837-ebd1c71cfb61"/>
+				<textFieldExpression><![CDATA[$F{paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="79" y="78" width="89" height="20" uuid="5dd44135-69eb-47dc-b717-b51d088dd391"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Médico:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="78" width="288" height="20" uuid="c96db6e5-8880-4e7b-bfa6-a3404da67004"/>
+				<textFieldExpression><![CDATA[$F{medico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="79" y="131" width="389" height="20" uuid="07886487-dfe5-4201-acf6-b3845e9bf06d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="79" y="151" width="389" height="64" uuid="0ed6c4bc-ae10-4c85-92f9-d94e039acaaf"/>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="208" y="263" width="114" height="20" uuid="935c1421-94cd-43f6-8984-85a770ea1900"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Médico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="190" y="262" width="145" height="1" uuid="097cd19f-232e-4c62-91c9-b1ebb2921e22"/>
+			</line>
+			<staticText>
+				<reportElement x="79" y="38" width="89" height="20" uuid="058698b9-2f90-4d04-9a73-6a77f4cde734"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="38" width="88" height="20" uuid="ac5489bc-5cf0-4413-a9d5-45a47b695516"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="68" y="38" width="100" height="20" uuid="f811cc04-23be-48cf-9a09-67d8e7186cf6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="168" y="38" width="100" height="20" uuid="334e8fc6-386c-464a-b49d-763022e8b283"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="268" y="38" width="100" height="20" uuid="382196fe-d875-4b72-b20d-2880cc62f5dc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="368" y="38" width="100" height="20" uuid="e10fc869-5253-4920-9cbd-0f5576d882a4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="68" y="58" width="100" height="20" uuid="3dd6400a-05e6-4062-beec-6c35dc1ef62b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="168" y="58" width="300" height="20" uuid="69a00e13-1b12-4757-a1e0-6af9c51a087c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="68" y="78" width="100" height="20" uuid="aff5d948-1af7-403a-9000-fdfa9056b6e6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="168" y="78" width="300" height="20" uuid="4048974d-b149-4e46-8936-31e3cbfcbeb9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="68" y="131" width="400" height="20" uuid="54535608-5924-4e70-b9a1-ad9d487482a2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="68" y="151" width="400" height="64" uuid="6ded2600-69a5-47a8-8aae-e5d2138c3f37"/>
+			</rectangle>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="30" width="282" height="20" uuid="4294bff3-5a8d-40f6-8c58-debf604d9acc"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Vinícius Mendonça - Projeto Consultório APOO 2021]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
